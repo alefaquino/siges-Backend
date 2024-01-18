@@ -1,55 +1,55 @@
-package com.example.TesteNoxTec.Services;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import java.util.List;
-import java.util.Optional;
-
-import com.example.TesteNoxTec.Entity.Contatos;
-import com.example.TesteNoxTec.Repository.ContatosRepository;
-
-@Service
-public class ContatosService {
-
-    private final ContatosRepository contatosRepository ;
-
-    @Autowired
-    public ContatosService(ContatosRepository contatosRepository) {
-        this.contatosRepository = contatosRepository;
-    }
-
-    public Contatos salvarContato(Contatos contatos) {
-        // Adicione lógica de validação, se necessário
-        return contatosRepository.save(contatos);
-    }
-
-    public List<Contatos> obterTodosContatos() {
-        return contatosRepository.findAll();
-    }
-
-    public Optional<Contatos> obterContatoPorId(Long id) {
-        return contatosRepository.findById(id);
-    }
-
-    public Optional<Contatos> obterContatoPorCelular(Long celular) {
-        return contatosRepository.findByCelular(celular);
-    }
-
-    public Contatos atualizarContato(Contatos contatos) {
-        // Adicione lógica de validação, se necessário
-        return contatosRepository.save(contatos);
-    }
-
-    public void excluirContato(Long id) {
-        contatosRepository.deleteById(id);
-    }
-
-    public void marcarComoFavorito(Long id, boolean isFavorito) {
-        Optional<Contatos> optionalContatos = contatosRepository.findById(id);
-
-        if (optionalContatos.isPresent()) {
-            Contatos contatos = optionalContatos.get();
-            contatos.setSnFavorito(isFavorito ? 'S' : 'N');
-            contatosRepository.save(contatos);
-        }
-    }
-}
+//package com.example.TesteNoxTec.Services;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.stereotype.Service;
+//import java.util.List;
+//import java.util.Optional;
+//
+//import com.example.TesteNoxTec.Entity.Alunos;
+//import com.example.TesteNoxTec.Repository.AlunosRepository;
+//
+//@Service
+//public class ContatosService {
+//
+//    private final AlunosRepository alunosRepository;
+//
+//    @Autowired
+//    public ContatosService(AlunosRepository alunosRepository) {
+//        this.alunosRepository = alunosRepository;
+//    }
+//
+//    public Alunos salvarContato(Alunos alunos) {
+//        // Adicione lógica de validação, se necessário
+//        return alunosRepository.save(alunos);
+//    }
+//
+//    public List<Alunos> obterTodosContatos() {
+//        return alunosRepository.findAll();
+//    }
+//
+//    public Optional<Alunos> obterContatoPorId(Long id) {
+//        return alunosRepository.findById(id);
+//    }
+//
+//    public Optional<Alunos> obterContatoPorCelular(Long celular) {
+//        return alunosRepository.findByCelular(celular);
+//    }
+//
+//    public Alunos atualizarContato(Alunos alunos) {
+//        // Adicione lógica de validação, se necessário
+//        return alunosRepository.save(alunos);
+//    }
+//
+//    public void excluirContato(Long id) {
+//        alunosRepository.deleteById(id);
+//    }
+//
+//    public void marcarComoFavorito(Long id, boolean isFavorito) {
+//        Optional<Alunos> optionalContatos = alunosRepository.findById(id);
+//
+//        if (optionalContatos.isPresent()) {
+//            Alunos alunos = optionalContatos.get();
+//            alunos.setSnFavorito(isFavorito ? 'S' : 'N');
+//            alunosRepository.save(alunos);
+//        }
+//    }
+//}
