@@ -1,4 +1,4 @@
-package com.example.TesteNoxTec;
+package com.example.BeneVivere;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

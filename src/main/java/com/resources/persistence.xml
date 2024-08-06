@@ -6,7 +6,7 @@
              version="2.1">
     <persistence-unit name="seuPU" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <class>com.example.TesteNoxTec.Entity;</class>
+        <class>com.example.BeneVivere.Entity;</class>
 
         <properties>
             <!-- Propriedades do Hibernate -->
@@ -15,7 +15,7 @@
             <property name="hibernate.show_sql" value="true"/>
 
             <!-- Configurações do DataSource -->
-            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/desafio"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/benevivere"/>
             <property name="javax.persistence.jdbc.user" value="postgres"/>
             <property name="javax.persistence.jdbc.password" value="1234"/>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
