@@ -2,7 +2,7 @@ package com.example.BeneVivere.Entity;
 
 import com.example.BeneVivere.Entity.Usuarios;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.sql.Timestamp;
 
 @Entity
