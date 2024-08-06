@@ -1,2 +1,4 @@
-package com.example.BeneVivere.Entity;public class Login {
+package com.example.BeneVivere.Entity;
+
+public class Login {
 }
