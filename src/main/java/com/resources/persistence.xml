@@ -14,10 +14,11 @@
             <property name="hibernate.hbm2ddl.auto" value="update"/>
             <property name="hibernate.show_sql" value="true"/>
 
+
             <!-- Configurações do DataSource -->
-            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/benevivere"/>
-            <property name="javax.persistence.jdbc.user" value="postgres"/>
-            <property name="javax.persistence.jdbc.password" value="1234"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://aws-0-sa-east-1.pooler.supabase.com:6543/postgres"/>
+            <property name="javax.persistence.jdbc.user" value="postgres.rorvdnnjgxnmvzeksfke"/>
+            <property name="javax.persistence.jdbc.password" value="Alef@quino123"/>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
         </properties>
     </persistence-unit>
